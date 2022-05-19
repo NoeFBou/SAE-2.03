@@ -1,37 +1,58 @@
-## Welcome to GitHub Pages
+# SAE-2.03 Equipe 4
 
-You can use the [editor on GitHub](https://github.com/NoeFBou/SAE-2.03/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+**dockerfile** pour lancer un serveur d'hébergement de vidéo basé sur l'image ```debian``` et utilisant ```nginx```
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Instructions pour lancer l'application
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+- Vérifiez si docker est installé :
+```shell
+docker --version
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+- Cloner le référentiel :
+ ```shell
+git clone git@github.com:NoeFBou/SAE-2.03.git
+```
 
-### Jekyll Themes
+- Aller au référentiel :
+```shell
+cd SAE-2.03
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/NoeFBou/SAE-2.03/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- Construisez l'image décrite dans dockerfile avec docker build : 
+```shell
+docker build -t <choisir-un-nom-pour-l'image> .
+```
 
-### Support or Contact
+- Lancer le serveur web :
+```shell
+docker run -d -p 54351:80 <nom-de-l'image-choisie>
+```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- Vérifier que l'application est en cours d'exécution. Pour ce faire, ouvrez un navigateur et tapez ```localhost:8080```
+
+- Vérifier que le conteneur associé est actif :
+```shell
+docker ps
+```
+
+- La sortie de ```docker ps``` doit être similaire à :
+```shell
+CONTAINER ID   IMAGE        COMMAND                  CREATED          STATUS          PORTS                                               NAMES
+bd2cbf1456f6   sae203_eq4   "nginx -g 'daemon of…"   34 seconds ago   Up 2 seconds    8096/tcp, 0.0.0.0:54351->80/tcp, :::54351->80/tcp   sae203_eq4
+```
+
+- Finalement, arrêtez le conteneur avec la commande suivante (les dernières chiffres sont le code de hachage affiché par docker ps):
+```shell
+docker stop bd2cbf1456f6
+```
+
+- Encore, si on souhaite supprimer le conteneur, on peut taper :
+```shell
+docker rm bd2cbf1456f6
+```
+
+**NOTE :** Au lieu du code de hachage, on peut toujours taper le nom du conteneur. Dans le cas d'exemple ce nom est ```sae203_eq4```
+
+
