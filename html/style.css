@@ -1,0 +1,81 @@
+html
+{
+    font-family : Arial, Helvetica, sans-serif;
+    min-height  : 100%;
+    height      : auto;
+}
+
+*
+{
+    margin : 0px;
+}
+
+body
+{
+    background-image : linear-gradient(to bottom left, #3eac8e 0%, #ffa17a 100%);
+    display          : block;
+    min-height       : 100%;
+}
+
+div
+{
+    padding : 12px;
+    margin  : 12px;
+}
+
+.mainBox
+{
+    display          : block;
+    margin-left      : auto;
+    margin-right     : auto;
+    margin-top       : 2%;
+    margin-bottom    : 2%;
+    box-shadow       : 0px 2px 8px #888888;
+    background-color : rgba(255,255,255,40%);
+    width            : 90%;
+    height           : auto;
+    text-align       : justify;
+    border-radius    : 10px;
+}
+
+.box 
+{
+    display          : block;
+    background-color : #EFEFEF;
+    box-shadow       : 0px 2px 8px #888888;
+    padding          : 12px 20px;
+}
+
+.boxFlex
+{
+    display : flex;
+    width   : auto;
+}
+
+h1
+{
+    padding    : 5px;
+    margin     : 12px;
+    text-align : center;
+    font-size  : x-large;
+    box-shadow : 0px 2px 8px #888888;
+    background-color: #EFEFEF;
+}
+
+h2
+{
+    padding         : 5px;
+    font-size       : x-large;
+    text-decoration : underline;
+}
+
+h3 { font-size : 120%; text-decoration: underline overline;  }
+
+header 
+{ 
+    display          : flex;
+    margin           : 12px;
+    background-color : #7189b8; color : white;
+    box-shadow       : 0px 2px 8px #888888;
+    justify-content  : center;
+}
