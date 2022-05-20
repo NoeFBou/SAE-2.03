@@ -1,3 +1,10 @@
+---
+layout: default
+title: SAE-2.03 Equipe 4
+description: Par Aymeric Leber, Noé Florence, Thomas Chanu, Ismaël Diarra 
+---
+
+
 # SAE-2.03 Equipe 4
 
 **dockerfile** pour lancer un serveur d'hébergement de vidéo basé sur l'image ```debian``` et utilisant ```nginx```
