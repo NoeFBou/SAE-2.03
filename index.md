@@ -5,7 +5,7 @@ description: Par Aymeric Leber, Noé Florence, Thomas Chanu, Ismaël Diarra
 ---
 
 
-# SAE-2.03 Equipe 4
+# SAE-2.03  Installation de services réseaux   
 
 **dockerfile** pour lancer un serveur d'hébergement de vidéo basé sur l'image ```debian``` et utilisant ```nginx```
 
