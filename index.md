@@ -62,7 +62,7 @@ docker rm bd2cbf1456f6
 
 **NOTE :** Au lieu du code de hachage, on peut toujours taper le nom du conteneur. Dans le cas d'exemple ce nom est ```sae203_eq4```
 
-##Étapes du travail
+## Étapes du travail
 
 Pour la réalisation de ce projet, nous avons choisi de travailler sur le sujet du docker de la vidéo à la demande. 
 
